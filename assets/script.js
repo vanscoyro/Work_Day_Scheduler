@@ -19,17 +19,16 @@ $(".saveBtn").on("click", function (){
 function hourVerification(){
     
     //creates a variable called 'searchTime' and gives it only the number of the hour from the luxon DataTime.local() function
-    //the split method ensures only the number is saved
-    var searchTime = parseInt(luxon.DateTime.local().toLocaleString({hour: 'numeric'}).split(" ", 1));
-    
-    //adds 12 hours to the current searchTime value to ensure it's consistent with how hours are formatted within textblock 
-    searchTime += 12;
+    //the .DateTime.TIME_24_SIMPLE call returns the time in 24-hour format
+    var searchTime = parseInt(luxon.DateTime.local().toLocaleString(luxon.DateTime.TIME_24_SIMPLE));
 
     //function that checks the value of each time-block class
     $(".time-block").each(function(){
 
         //assigns the hour of each time-block as an int in a variable 'blockHour'
         var blockHour = parseInt($(this).attr("id").split("hour")[1]);
+
+        console.log(searchTime, blockHour)
         
         //checks the time-block hour with the current time and assigns class of 'past' to the current instance of the time-block if blockHour is less than searchTime
         if (blockHour < searchTime){
