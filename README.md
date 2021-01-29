@@ -3,9 +3,13 @@ Third-Party APIs: Work Day Scheduler
 This simple work day scheduler allows the user to input daily plans within time blocks and save them to persist even after the browser has been closed. Throughout the day it updates to apply different colors to the text boxes based on the user's current local time. The user has the option to save inputted data with save buttons or clear the entire schedule with a clear button on the bottom of the page. 
 
 
+Below are screen shots of the Website:
+
+1. index.html
+![example1.JPG](screenShots/example1.JPG?raw=true "index.html capture")
 
 
-
+Here is the User Story and Acceptance Criteria:
 
 ## User Story
 
