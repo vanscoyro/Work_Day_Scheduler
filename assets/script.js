@@ -69,3 +69,28 @@ hourVerification();
  $("#hour15 .textBlock").val(localStorage.getItem("hour15"));
  $("#hour16 .textBlock").val(localStorage.getItem("hour16"));
  $("#hour17 .textBlock").val(localStorage.getItem("hour17"));
+
+ //reset button functionality
+ $(".resetBtn").on("click", function(){
+    //clear all the text boxes on the page
+    $("#hour9 .textBlock").val("");
+    $("#hour10 .textBlock").val("");
+    $("#hour11 .textBlock").val("");
+    $("#hour12 .textBlock").val("");
+    $("#hour13 .textBlock").val("");
+    $("#hour14 .textBlock").val("");
+    $("#hour15 .textBlock").val("");
+    $("#hour16 .textBlock").val("");
+    $("#hour17 .textBlock").val("");
+    //clear all the text values in local storage for their respective hour keys
+    localStorage.setItem("hour9", "");
+    localStorage.setItem("hour10", "");
+    localStorage.setItem("hour11", "");
+    localStorage.setItem("hour12", "");
+    localStorage.setItem("hour13", "");
+    localStorage.setItem("hour14", "");
+    localStorage.setItem("hour15", "");
+    localStorage.setItem("hour16", "");
+    localStorage.setItem("hour17", "");
+
+})
